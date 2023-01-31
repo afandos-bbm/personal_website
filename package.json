@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.0.0",
+    "astro-robots-txt": "^0.3.11",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
