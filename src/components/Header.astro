@@ -1,14 +1,15 @@
 ---
 import Button from "@components/Button.astro";
 import RootLogo from "@components/RootLogo.astro";
+
+function toggleTheme() {}
 ---
 
 <header
-  class="flex rounded-xl my-6 mx-20 py-2 px-4 items-center justify-between sticky top-5 bg-white opacity-100"
+  class="sticky flex items-center justify-between px-4 mx-20 mt-2 transition-colors bg-gray-200 shadow-xl opacity-100 dark:bg-gray-700 rounded-xl top-5"
 >
-  <RootLogo />
-
-  <nav class="flex list-none gap-5">
+  <RootLogo onlyBox />
+  <nav class="flex gap-5 list-none">
     <Button href="/about" title="Sobre mi" />
     <Button href="/portfolio" title="Portafolio" />
     <Button href="/contact" title="Contacto" />
