@@ -1,0 +1,13 @@
+---
+const { onlyBox } = Astro.props;
+---
+
+<div class="transition hover:scale-105">
+  <a href="/">
+    <img
+      src={onlyBox ? "/my-favicon.svg" : `/logos/my-logo.svg`}
+      alt="logo"
+      class="object-containw-14 h-14"
+    />
+  </a>
+</div>
