@@ -7,4 +7,5 @@ import tailwind from '@astrojs/tailwind'
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://alejandrofan2.dev'
+  // base: '/personal_website'
 })
