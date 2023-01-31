@@ -16,7 +16,7 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/my-favicon.svg" />
     <link rel="canonical" href={Astro.url.href} />
     <meta name="description" content={description} />
     <meta property="og:title" content={seoTitle} />
@@ -27,7 +27,7 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
     <meta property="og:image" content="https://fan2dev.com/og-image.png" />
     <meta property="og:locale" content="es_ES" />
     <link
-      href="/fonts/Venacti-Regular.woff2"
+      href="/fonts/Font-Venacti-Regular.woff2"
       rel="preload"
       as="font"
       type="font/woff2"
@@ -35,7 +35,7 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
       crossorigin
     />
     <link
-      href="/fonts/Venacti-Bold.woff2"
+      href="/fonts/Font-Venacti-Bold.woff2"
       rel="preload"
       as="font"
       type="font/woff2"
@@ -44,7 +44,7 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
     />
     <title>{seoTitle}</title>
   </head>
-  <body class="bg-gray-200 min-h-screen mt-5">
+  <body class="min-h-screen mt-5 bg-gray-200">
     <Header />
     <main class="min-h-screen mx-20">
       <slot />
@@ -59,7 +59,7 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/fonts/Venacti-Regular.woff2") format("woff2");
+    src: url("/fonts/Font-Venacti-Regular.woff2") format("woff2");
   }
 
   @font-face {
@@ -67,7 +67,7 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/fonts/Venacti-Bold.woff2") format("woff2");
+    src: url("/fonts/Font-Venacti-Bold.woff2") format("woff2");
   }
 
   html,
