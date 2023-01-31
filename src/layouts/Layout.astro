@@ -11,7 +11,7 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -44,9 +44,17 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
     />
     <title>{seoTitle}</title>
   </head>
-  <body class="min-h-screen mt-5 bg-gray-200">
+  <body class="flex flex-col min-h-screen mt-5 overflow-hidden bg-gray-300 dark:bg-gray-600">
+    <div class="flex justify-end pr-20">
+      <button
+        class="px-3 py-2 transition-colors bg-gray-200 shadow-xl -mt-7 rounded-xl font-title dark:bg-gray-700 dark:text-gray-200"
+        onclick={`document.documentElement.classList.toggle("dark");`}
+      >
+        🌞 / 🌙
+      </button>
+    </div>
     <Header />
-    <main class="min-h-screen mx-20">
+    <main class="relative h-auto mx-20">
       <slot />
     </main>
     <Footer />
