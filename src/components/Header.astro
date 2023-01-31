@@ -1,0 +1,16 @@
+---
+import Button from "@components/Button.astro";
+import RootLogo from "@components/RootLogo.astro";
+---
+
+<header
+  class="flex rounded-xl my-6 mx-20 py-2 px-4 items-center justify-between sticky top-5 bg-white opacity-100"
+>
+  <RootLogo />
+
+  <nav class="flex list-none gap-5">
+    <Button href="/about" title="Sobre mi" />
+    <Button href="/portfolio" title="Portafolio" />
+    <Button href="/contact" title="Contacto" />
+  </nav>
+</header>
