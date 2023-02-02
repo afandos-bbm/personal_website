@@ -1,12 +1,5 @@
 {
-  "cSpell.words": [
-    "astrojs",
-    "github",
-    "pnpm",
-    "tailwindcss",
-    "Venacti",
-    "withastro"
-  ],
+  "cSpell.words": ["astrojs", "github", "pnpm", "tailwindcss", "Venacti", "withastro"],
   "cSpell.ignorePaths": [
     "pnpm-lock.yaml",
     "package-lock.json",
@@ -15,5 +8,6 @@
     ".git/objects",
     ".vscode",
     ".vscode-insiders"
-  ]
+  ],
+  "editor.formatOnSave": true
 }
