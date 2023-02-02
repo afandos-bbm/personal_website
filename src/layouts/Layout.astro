@@ -1,15 +1,22 @@
 ---
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import AccesibilityBtn from "@components/AccesibilityButton.astro";
-import ThemeBtn from "@components/ThemeButton.astro";
+import Header from '@components/Header.jsx'
+import Footer from '@components/Footer.astro'
+import AccesibilityBtn from '@components/AccesibilityButton.astro'
+import ThemeBtn from '@components/ThemeButton.astro'
+import Button from '@components/Button.astro'
 export interface Props {
-  title: string;
+  title: string
 }
 
-const { title, description = "Paguina web de Alejandro Fandos" } = Astro.props;
+const { title, description = 'Paguina web de Alejandro Fandos' } = Astro.props
 
-const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
+const seoTitle = title ? `${title} | Fan2Dev` : 'Fan2Dev | Alejandro Fandos'
+
+const ROUTES = [
+  { name: 'Sobre mi', path: '/about' },
+  { name: 'Portafolio', path: '/portfolio' },
+  { name: 'Contacto', path: '/contact' }
+]
 ---
 
 <!DOCTYPE html>
@@ -46,35 +53,32 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
     />
     <script is:inline>
       const theme = (() => {
-        if (
-          typeof localStorage !== "undefined" &&
-          localStorage.getItem("theme")
-        ) {
-          return localStorage.getItem("theme");
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme')
         }
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          return "dark";
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark'
         }
-        return "light";
-      })();
+        return 'light'
+      })()
 
-      if (theme === "light") {
-        document.documentElement.classList.remove("dark");
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark')
       } else {
-        document.documentElement.classList.add("dark");
+        document.documentElement.classList.add('dark')
       }
-      window.localStorage.setItem("theme", theme);
+      window.localStorage.setItem('theme', theme)
     </script>
     <title>{seoTitle}</title>
   </head>
-  <body
-    class="flex flex-col min-h-screen mt-5 overflow-hidden bg-gray-300 dark:bg-gray-600"
-  >
-    <div class="flex justify-end gap-2 pr-20 -mt-12 transition-colors">
+  <body class="flex flex-col min-h-screen mt-5 overflow-hidden bg-gray-300 dark:bg-gray-600">
+    <div class="flex justify-end gap-2 pb-2 pr-20 -mt-12 transition-colors">
       <AccesibilityBtn />
       <ThemeBtn />
     </div>
-    <Header />
+    <Header client:only>
+      {ROUTES.map((route) => <Button href={route.path}>{route.name}</Button>)}
+    </Header>
     <main class="relative h-auto mx-20">
       <slot />
     </main>
@@ -84,25 +88,24 @@ const seoTitle = title ? `${title} | Fan2Dev` : "Fan2Dev | Alejandro Fandos";
 
 <style>
   @font-face {
-    font-family: "Venacti Regular";
+    font-family: 'Venacti Regular';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/fonts/Font-Venacti-Regular.woff2") format("woff2");
+    src: url('/fonts/Font-Venacti-Regular.woff2') format('woff2');
   }
 
   @font-face {
-    font-family: "Venacti Bold";
+    font-family: 'Venacti Bold';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/fonts/Font-Venacti-Bold.woff2") format("woff2");
+    src: url('/fonts/Font-Venacti-Bold.woff2') format('woff2');
   }
 
   html,
   body {
-    font-family: "Venacti Regular", system-ui, -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-      "Helvetica Neue", sans-serif;
+    font-family: 'Venacti Regular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 </style>
