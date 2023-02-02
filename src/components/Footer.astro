@@ -1,37 +1,21 @@
----
-import RootLogo from "@components/RootLogo.astro";
----
-
-<footer
-  class="flex flex-col items-center p-4 mt-auto bg-gray-200 dark:bg-gray-700 h-500"
->
-  <nav class="flex items-center gap-20 py-12">
-    <div
-      class="text-lg tracking-wide text-gray-800 dark:text-gray-200 hover:underline"
-    >
+<footer class="flex flex-col items-center p-4 mt-auto bg-gray-200 dark:bg-gray-700 h-500">
+  <nav class="flex flex-col items-center gap-2 py-12 md:gap-20 md:flex-row">
+    <div class="text-lg tracking-wide text-gray-800 dark:text-gray-200 hover:underline">
       <a href="/about"> Sobre mi</a>
     </div>
-    <div
-      class="text-lg tracking-wide text-gray-800 dark:text-gray-200 hover:underline"
-    >
+    <div class="text-lg tracking-wide text-gray-800 dark:text-gray-200 hover:underline">
       <a href="/portfolio"> Portafolio</a>
     </div>
-    <div
-      class="text-lg tracking-wide text-gray-800 dark:text-gray-200 hover:underline"
-    >
+    <div class="text-lg tracking-wide text-gray-800 dark:text-gray-200 hover:underline">
       <a href="/contact"> Contacto</a>
     </div>
   </nav>
-  <div class="transition hover:scale-110">
+  <div class="pb-8 transition hover:scale-110">
     <a href="/">
-      <img
-        src="/logos/my-logo.svg"
-        alt="logo"
-        class="object-contain bg-gray-200 w-44 rounded-xl"
-      />
+      <img src="/logos/my-logo.svg" alt="logo" class="object-contain bg-gray-200 w-44 rounded-xl" />
     </a>
   </div>
-  <p class="py-4 text-lg tracking-wide text-gray-800 dark:text-gray-200">
+  <p class="pb-8 text-lg tracking-wide text-center text-gray-800 dark:text-gray-200">
     Todos los derechos reservados &copy; 2021
   </p>
 </footer>

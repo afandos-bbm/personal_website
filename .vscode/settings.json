@@ -1,5 +1,13 @@
 {
-  "cSpell.words": ["astrojs", "github", "pnpm", "tailwindcss", "Venacti", "withastro"],
+  "cSpell.words": [
+    "astrojs",
+    "github",
+    "headlessui",
+    "pnpm",
+    "tailwindcss",
+    "Venacti",
+    "withastro"
+  ],
   "cSpell.ignorePaths": [
     "pnpm-lock.yaml",
     "package-lock.json",

@@ -4,6 +4,7 @@ specifiers:
   '@astrojs/react': 2.0.2
   '@astrojs/sitemap': 1.0.1
   '@astrojs/tailwind': 3.0.0
+  '@headlessui/react': ^1.7.8
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   '@typescript-eslint/parser': 5.49.0
@@ -23,12 +24,13 @@ specifiers:
   react: 18.0.0
   react-dom: 18.0.0
   tailwindcss: 3.2.4
-  typescript: ^4.9.5
+  typescript: 4.9.5
 
 dependencies:
   '@astrojs/react': 2.0.2_z5gax7qsno6qaf2ngprhq6e6sa
   '@astrojs/sitemap': 1.0.1
   '@astrojs/tailwind': 3.0.0_uhsc6pehih5huiqhsy5i7sy5um
+  '@headlessui/react': 1.7.8_zpnidt7m3osuk7shl3s4oenomq
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   astro-robots-txt: 0.3.11
@@ -583,6 +585,18 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+
+  /@headlessui/react/1.7.8_zpnidt7m3osuk7shl3s4oenomq:
+    resolution: {integrity: sha512-zcwb0kd7L05hxmoAMIioEaOn235Dg0fUO+iGbLPgLVSjzl/l39V6DTpC2Df49PE5aG5/f5q0PZ9ZHZ78ENNV+A==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.0.0
+      react-dom: 18.0.0_react@18.0.0
+    dev: false
 
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
@@ -1232,6 +1246,10 @@ packages:
   /cli-spinners/2.7.0:
     resolution: {integrity: sha512-qu3pN8Y3qHNgE2AFweciB1IfMnmZ/fsNTEE+NOFjmGB2F/7rLhnhzppvpCnN4FovtP26k8lHyy9ptEbNwWFLzw==}
     engines: {node: '>=6'}
+
+  /client-only/0.0.1:
+    resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
 
   /clone/1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}

@@ -71,15 +71,15 @@ const ROUTES = [
     </script>
     <title>{seoTitle}</title>
   </head>
-  <body class="flex flex-col min-h-screen mt-5 overflow-hidden bg-gray-300 dark:bg-gray-600">
-    <div class="flex justify-end gap-2 pb-2 pr-20 -mt-12 transition-colors">
+  <body class="flex flex-col min-h-screen mt-5 bg-gray-300 dark:bg-gray-600">
+    <div class="flex justify-end gap-2 pb-2 pr-5 -mt-12 transition-colors md:pr-20">
       <AccesibilityBtn />
       <ThemeBtn />
     </div>
     <Header client:only>
       {ROUTES.map((route) => <Button href={route.path}>{route.name}</Button>)}
     </Header>
-    <main class="relative h-auto mx-20">
+    <main class="relative h-auto mx-20 -z-10">
       <slot />
     </main>
     <Footer />
