@@ -1,11 +1,11 @@
 ---
-const { title, href } = Astro.props;
+const { href } = Astro.props
 ---
 
 <div
-  class="p-3 my-3 text-base tracking-widest text-white uppercase transition-colors duration-200 ease-in-out border-4 dark:border-gray-800 rounded-xl bg-primary-basic font-body hover:bg-primary-700 hover:border-secondary-basic dark:hover:border-secondary-basic"
+  class="p-2 m-1 text-base tracking-widest text-white uppercase transition-colors duration-200 ease-in-out border-4 dark:border-gray-800 rounded-xl bg-primary-basic font-body hover:bg-primary-700 hover:border-secondary-basic dark:hover:border-secondary-basic"
 >
   <a href={href}>
-    {title}
+    <slot />
   </a>
 </div>
