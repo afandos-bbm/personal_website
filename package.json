@@ -62,5 +62,12 @@
       ],
       "parser": "astro-eslint-parser"
     }
-  ]
+  ],
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "semi": false
+  }
 }
