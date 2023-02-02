@@ -14,7 +14,7 @@ export default function Header({ children }) {
         <Menu>
           {({ open }) => (
             <Fragment>
-              <Menu.Button className="flex flex-row items-center justify-center w-12 h-12 my-1 text-2xl text-gray-900 bg-gray-100 rounded-full hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+              <Menu.Button className="flex flex-row items-center justify-center w-12 h-12 my-1 text-2xl text-gray-900 bg-gray-200 rounded-full hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
                 <div className="space-y-1">
                   <span className="block w-8 h-1 bg-gray-600 dark:bg-gray-300"></span>
                   <span className="block w-8 h-1 bg-gray-600 dark:bg-gray-300"></span>
