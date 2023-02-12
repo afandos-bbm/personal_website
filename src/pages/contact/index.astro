@@ -1,8 +1,13 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import UnderConstruction from "@components/UnderConstruction.astro";
+import Layout from '@layouts/Layout.astro'
+import UnderConstruction from '@components/UnderConstruction.astro'
+import BodyCard from '@components/BodyCard.astro'
+import Title from '@components/Title.astro'
 ---
 
 <Layout title="Contacto">
-  <UnderConstruction title="Contacto" />
+  <BodyCard>
+    <Title type="contact" />
+    <UnderConstruction title="Contacto" />
+  </BodyCard>
 </Layout>
