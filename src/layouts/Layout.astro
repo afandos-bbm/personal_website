@@ -79,7 +79,7 @@ const ROUTES = [
     <Header client:only>
       {ROUTES.map((route) => <Button href={route.path}>{route.name}</Button>)}
     </Header>
-    <main class="relative h-auto mx-20 -z-10">
+    <main class="relative h-auto -z-10">
       <slot />
     </main>
     <Footer />
