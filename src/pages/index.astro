@@ -1,8 +1,18 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import UnderConstruction from "@components/UnderConstruction.astro";
+import Layout from '@layouts/Layout.astro'
+import UnderConstruction from '@components/UnderConstruction.astro'
 ---
 
 <Layout title="">
-  <UnderConstruction title="Home" />
+  <div class="absolute">
+    <img src="/logos/my-logo-left.png" alt="decoration-body-logo" />
+  </div>
+  <div class="absolute right-0 bottom-0">
+    <img src="/logos/my-logo-right.png" alt="decoration-body-logo" />
+  </div>
+  <section
+    class="flex flex-col items-center justify-center h-screen rounded-lg bg-gray-200 my-10 shadow-lg mx-48"
+  >
+    <UnderConstruction title="Home" />
+  </section>
 </Layout>
