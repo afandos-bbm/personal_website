@@ -25,16 +25,7 @@ const ROUTES = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/my-favicon.svg" />
-    <link rel="canonical" href={Astro.url.href} />
-    <meta name="description" content={description} />
-    <meta property="og:title" content={seoTitle} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={Astro.url.href} />
-    <meta property="og:site_name" content="Fan2Dev" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://fan2dev.com/og-image.png" />
-    <meta property="og:locale" content="es_ES" />
+    <title>{seoTitle}</title>
     <link
       href="/fonts/Font-Venacti-Regular.woff2"
       rel="preload"
@@ -51,6 +42,16 @@ const ROUTES = [
       fetchpriority="high"
       crossorigin
     />
+    <link rel="icon" type="image/svg+xml" href="/my-favicon.svg" />
+    <link rel="canonical" href={Astro.url.href} />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={seoTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:site_name" content="Fan2Dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://fan2dev.com/og-image.png" />
+    <meta property="og:locale" content="es_ES" />
     <script is:inline>
       const theme = (() => {
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -69,7 +70,6 @@ const ROUTES = [
       }
       window.localStorage.setItem('theme', theme)
     </script>
-    <title>{seoTitle}</title>
   </head>
   <body class="flex flex-col min-h-screen mt-5 bg-gray-300 dark:bg-gray-600">
     <div class="flex justify-end gap-2 pb-2 pr-5 -mt-12 transition-colors md:pr-20">
