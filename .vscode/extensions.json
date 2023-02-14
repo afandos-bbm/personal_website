@@ -1,7 +1,4 @@
 {
-  "recommendations": [
-    "astro-build.astro-vscode",
-    "andrewmcodes.tailwindcss-extension-pack"
-  ],
-  "unwantedRecommendations": []
+	"recommendations": ["astro-build.astro-vscode", "andrewmcodes.tailwindcss-extension-pack"],
+	"unwantedRecommendations": []
 }

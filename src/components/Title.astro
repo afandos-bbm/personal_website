@@ -2,17 +2,17 @@
 const { type } = Astro.props
 
 const titleType = {
-  about: 'Sobre mi',
-  portfolio: 'Portafolio',
-  contact: 'Contacto'
+	about: 'Sobre mi',
+	portfolio: 'Portafolio',
+	contact: 'Contacto'
 }
 
 const title = titleType[type]
 ---
 
-<img src={`/icons/${type}.svg`} alt="decoration-title-icon" class="w-14 dark:invert-[1]" />
-<div class="flex justify-center align-center title-container items-center">
-  <img src="/logos/my-logo-left.webp" alt="decoration-title-logo" class="w-20" />
-  <h1 class="font-title md:mx-10 text-3xl uppercase text-gray-700 dark:text-gray-200">{title}</h1>
-  <img src="/logos/my-logo-right.webp" alt="decoration-title-logo" class="w-20" />
+<img src={`/icons/${type}.svg`} alt='decoration-title-icon' class='w-14 dark:invert-[1]' />
+<div class='flex justify-center align-center title-container items-center'>
+	<img src='/logos/my-logo-left.webp' alt='decoration-title-logo' class='w-20' />
+	<h1 class='font-title md:mx-10 text-3xl uppercase text-gray-700 dark:text-gray-200'>{title}</h1>
+	<img src='/logos/my-logo-right.webp' alt='decoration-title-logo' class='w-20' />
 </div>
