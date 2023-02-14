@@ -1,21 +1,36 @@
 {
-  "cSpell.words": [
-    "astrojs",
-    "github",
-    "headlessui",
-    "pnpm",
-    "tailwindcss",
-    "Venacti",
-    "withastro"
-  ],
-  "cSpell.ignorePaths": [
-    "pnpm-lock.yaml",
-    "package-lock.json",
-    "node_modules",
-    "vscode-extension",
-    ".git/objects",
-    ".vscode",
-    ".vscode-insiders"
-  ],
-  "editor.formatOnSave": true
+	"cSpell.words": [
+		"astrojs",
+		"crossorigin",
+		"fetchpriority",
+		"github",
+		"headlessui",
+		"pnpm",
+		"tailwindcss",
+		"typeof",
+		"Venacti",
+		"webp",
+		"withastro"
+	],
+	"cSpell.ignorePaths": [
+		"pnpm-lock.yaml",
+		"package-lock.json",
+		"node_modules",
+		"vscode-extension",
+		".git/objects",
+		".vscode",
+		".vscode-insiders"
+	],
+	"eslint.workingDirectories": ["./src"],
+	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "astro"],
+	"eslint.options": {
+		"extensions": [".js", ".jsx", ".ts", ".tsx", ".astro"]
+	},
+	"editor.formatOnSave": true,
+	"prettier.configPath": ".prettierrc.cjs",
+	"prettier.requireConfig": true,
+	"prettier.documentSelectors": ["**/*.astro"],
+	"[astro]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
