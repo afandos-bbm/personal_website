@@ -1,13 +1,21 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import UnderConstruction from '@components/UnderConstruction.astro'
 import BodyCard from '@components/BodyCard.astro'
 import Title from '@components/Title.astro'
+import ContactBtn from '@components/ContactBtn.astro'
 ---
 
-<Layout title="Contacto">
+<Layout title='Contacto'>
   <BodyCard>
-    <Title type="contact" />
-    <UnderConstruction title="Contacto" />
+    <Title type='contact' />
+    <div class='flex flex-row items-center'>
+      <img src='/icons/contact.svg' alt='contact_image' class='aspect-square w-[500px]' />
+      <div class='flex flex-col'>
+        <ContactBtn type='email' />
+        <ContactBtn type='telegram' />
+        <ContactBtn type='discord' />
+        <ContactBtn type='linkedin' />
+      </div>
+    </div>
   </BodyCard>
 </Layout>
