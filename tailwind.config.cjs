@@ -38,7 +38,8 @@ module.exports = {
       },
       animation: {
         cursor: 'cursor .6s linear infinite alternate',
-        type: 'type 2s ease-out 1.8s 1 normal both'
+        type: 'type 2s ease-out 1.8s 1 normal both',
+        typeMini: 'typeMini 1.7s ease-out 1.4s 1 normal both'
       },
       keyframes: {
         type: {
@@ -53,6 +54,19 @@ module.exports = {
           '75%, 80%': { width: '16ch' },
           '85%, 90%': { width: '18ch' },
           '95%': { width: '20ch' }
+        },
+        typeMini: {
+          '0%': { width: '0ch' },
+          '5%, 10%': { width: '1ch' },
+          '15%, 20%': { width: '2ch' },
+          '25%, 30%': { width: '3ch' },
+          '35%, 40%': { width: '4ch' },
+          '45%, 50%': { width: '5ch' },
+          '55%, 60%': { width: '6ch' },
+          '65%, 70%': { width: '7ch' },
+          '75%, 80%': { width: '8ch' },
+          '85%, 90%': { width: '9ch' },
+          '95%': { width: '10ch' }
         },
         cursor: {
           '0%': {},
