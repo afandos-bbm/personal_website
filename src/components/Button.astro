@@ -1,11 +1,16 @@
 ---
-const { href } = Astro.props
+const { href, icon, name } = Astro.props
 ---
 
-<div
-  class="p-2 m-1 text-base tracking-widest text-white uppercase transition-colors duration-200 ease-in-out border-4 dark:border-gray-800 rounded-xl bg-primary-basic font-body hover:bg-primary-700 hover:border-secondary-basic dark:hover:border-secondary-basic"
->
-  <a href={href}>
-    <slot />
-  </a>
-</div>
+<a href={href}>
+  <button
+    class='relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800'
+  >
+    <span
+      class='relative flex flex-row px-3 py-2 transition-all ease-in duration-75 bg-gray-200 dark:bg-gray-700 rounded-md group-hover:bg-opacity-0 gap-2'
+    >
+      <i class={`${icon}`}></i>
+      <p>{name}</p>
+    </span>
+  </button>
+</a>

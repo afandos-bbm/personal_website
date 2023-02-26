@@ -5,6 +5,8 @@ import AccessibilityBtn from '@components/AccessibilityBtn.astro'
 import ThemeBtn from '@components/ThemeBtn.astro'
 import Button from '@components/Button.astro'
 
+import '@flaticon/flaticon-uicons/css/regular/all.css'
+
 export interface Props {
   title: string
 }
@@ -14,9 +16,9 @@ const { title, description = 'Página web de Alejandro Fandos' } = Astro.props
 const seoTitle = title ? `${title} | Fan2Dev` : 'Fan2Dev | Alejandro Fandos'
 
 const ROUTES = [
-  { name: 'Sobre mi', path: '/about' },
-  { name: 'Portafolio', path: '/portfolio' },
-  { name: 'Contacto', path: '/contact' }
+  { name: 'Sobre mi', path: '/about', icon: 'fi fi-rr-user' },
+  { name: 'Portafolio', path: '/portfolio', icon: 'fi fi-rr-document-signed' },
+  { name: 'Contacto', path: '/contact', icon: 'fi fi-rr-envelope' }
 ]
 ---
 
@@ -61,7 +63,7 @@ const ROUTES = [
       <ThemeBtn />
     </div>
     <Header client:load>
-      {ROUTES.map((route) => <Button href={route.path}>{route.name}</Button>)}
+      {ROUTES.map((route) => <Button href={route.path} icon={route.icon} name={route.name} />)}
     </Header>
     <main class='relative h-auto -z-10'>
       <slot />

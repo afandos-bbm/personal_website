@@ -10,7 +10,7 @@ export default function Header({ children }) {
           <img src='/my-favicon.svg' alt='logo' className='object-contain w-12 h-12' />
         </a>
       </div>
-      <nav className='hidden py-2 list-none md:flex'>{children}</nav>
+      <nav className='hidden py-2 gap-5 list-none md:flex'>{children}</nav>
       <div className='relative md:hidden'>
         <Menu>
           {({ open }) => (
@@ -35,8 +35,10 @@ export default function Header({ children }) {
                 leaveFrom='transform opacity-100 scale-100'
                 leaveTo='transform opacity-0 scale-95'
               >
-                <Menu.Items className='absolute right-0 z-10 w-48 p-2 text-gray-900 bg-gray-100 top-2 -mr-3 rounded-lg shadow-lg  dark:bg-gray-700 '>
+                <Menu.Items className='absolute right-0 z-10 p-2 text-gray-900 bg-gray-100 top-2 -mr-3 rounded-lg shadow-lg dark:bg-gray-700 '>
+                  <div className='gap-1 p-1 w-28 flex flex-col'>
                   {children}
+                  </div>
                 </Menu.Items>
               </Transition>
             </React.Fragment>
