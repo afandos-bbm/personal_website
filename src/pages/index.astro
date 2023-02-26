@@ -8,14 +8,18 @@ import BodyCard from '@components/BodyCard.astro'
   <div class='mx-60 mt-10 flex gap-14 items-center'>
     <div class='flex rounded-full w-52 h-52 bg-white items-center justify-center text-6xl'>?</div>
     <div class='flex flex-col gap-3'>
-      <h1 class='text-4xl font-bold tracking-wider text-gray-800 uppercase dark:text-gray-200'>
+      <h1 class='text-4xl font-title tracking-wider text-gray-800 uppercase dark:text-gray-200'>
         <span
           class='inline-flex h-20 pt-2 overflow-x-hidden animate-type group-hover:animate-type-reverse whitespace-nowrap text-brand-accent will-change-transform'
         >
-          Bienvenido a Fan2dev 👋
+          Bienvenido a <div
+            class='text-4xl px-3 text-transparent bg-clip-text bg-gradient-to-tr font-title from-primary-600 to-secondary-basic'
+          >
+            fan2dev
+          </div> 👋
         </span>
         <span
-          class='box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change-opacity'
+          class='box-border inline-block w-1 h-4 ml-2 -mb-2 dark:bg-white rounded bg-black md:h-12 animate-cursor will-change-opacity'
         ></span>
       </h1>
       <h2
