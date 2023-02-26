@@ -8,8 +8,12 @@ import ContactBtn from '@components/ContactBtn.astro'
 <Layout title='Contacto'>
   <BodyCard>
     <Title type='contact' />
-    <div class='flex flex-row items-center'>
-      <img src='/icons/contact.svg' alt='contact_image' class='aspect-square w-[500px]' />
+    <div class='flex flex-col xl:flex-row items-center pb-5'>
+      <img
+        src='/icons/contact.svg'
+        alt='contact_image'
+        class='aspect-square w-[300px] lg:w-[500px]'
+      />
       <div class='flex flex-col'>
         <ContactBtn type='email' />
         <ContactBtn type='telegram' />
