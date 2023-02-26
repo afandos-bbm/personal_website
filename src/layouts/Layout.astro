@@ -65,7 +65,7 @@ const ROUTES = [
     <Header client:load>
       {ROUTES.map((route) => <Button href={route.path} icon={route.icon} name={route.name} />)}
     </Header>
-    <main class='relative h-auto -z-10'>
+    <main class='relative h-auto z-0'>
       <slot />
     </main>
     <Footer />

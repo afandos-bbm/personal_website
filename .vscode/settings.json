@@ -5,6 +5,7 @@
 		"fetchpriority",
 		"github",
 		"headlessui",
+		"nowrap",
 		"pnpm",
 		"tailwindcss",
 		"typeof",
@@ -21,15 +22,31 @@
 		".vscode",
 		".vscode-insiders"
 	],
-	"eslint.workingDirectories": ["./src"],
-	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "astro"],
+	"eslint.workingDirectories": [
+		"./src"
+	],
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"astro"
+	],
 	"eslint.options": {
-		"extensions": [".js", ".jsx", ".ts", ".tsx", ".astro"]
+		"extensions": [
+			".js",
+			".jsx",
+			".ts",
+			".tsx",
+			".astro"
+		]
 	},
 	"editor.formatOnSave": true,
 	"prettier.configPath": ".prettierrc.cjs",
 	"prettier.requireConfig": true,
-	"prettier.documentSelectors": ["**/*.astro"],
+	"prettier.documentSelectors": [
+		"**/*.astro"
+	],
 	"[astro]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	}

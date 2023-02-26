@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Header({ children }) {
   return (
-    <header className='sticky flex flex-row items-center justify-between px-3 mx-5 transition-colors bg-gray-200 shadow-xl opacity-100 md:mx-20 dark:bg-gray-700 rounded-xl top-5'>
+    <header className='sticky flex flex-row items-center justify-between px-3 mx-5 transition-colors bg-gray-200 shadow-xl opacity-100 md:mx-20 dark:bg-gray-700 rounded-xl top-5 z-10'>
       <div className='transition md:hover:scale-125 hover:scale-105'>
         <a href='/'>
           <img src='/my-favicon.svg' alt='logo' className='object-contain w-12 h-12' />

@@ -4,18 +4,30 @@ import UnderConstruction from '@components/UnderConstruction.astro'
 import BodyCard from '@components/BodyCard.astro'
 ---
 
-<Layout title="">
-  <BodyCard>
-    <div class="flex flex-col items-center justify-center py-5 space-y-4 text-center">
-      <h1 class="text-4xl font-bold tracking-wider text-gray-800 uppercase dark:text-gray-200">
-        Bienvenido a Fan2dev
+<Layout title=''>
+  <div class='mx-60 mt-10 flex gap-14 items-center'>
+    <div class='flex rounded-full w-52 h-52 bg-white items-center justify-center'>?</div>
+    <div class='flex flex-col gap-3'>
+      <h1 class='text-4xl font-bold tracking-wider text-gray-800 uppercase dark:text-gray-200'>
+        <span
+          class='inline-flex h-20 pt-2 overflow-x-hidden animate-type group-hover:animate-type-reverse whitespace-nowrap text-brand-accent will-change-transform'
+        >
+          Bienvenido a Fan2dev 👋
+        </span>
+        <span
+          class='box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change-opacity'
+        ></span>
       </h1>
-      <h2 class="text-2xl font-bold text-gray-700 uppercase dark:text-gray-300">
-        Desarrollador de software multiplataforma
+      <h2
+        class='-mt-8 text-2xl font-bold text-gray-700 uppercase dark:text-gray-300 tracking-wider'
+      >
+        Desarrollador multiplataforma
       </h2>
     </div>
+  </div>
+  <BodyCard primary>
     <div
-      class="flex flex-col items-center justify-center py-5 space-y-4 text-justify text-gray-700 dark:text-gray-300"
+      class='flex flex-col items-center justify-center py-5 space-y-4 text-justify text-gray-700 dark:text-gray-300'
     >
       <p>
         Soy Alejandro Fandos, un joven apasionado por la tecnología y el desarrollo de soluciones de
@@ -42,6 +54,6 @@ import BodyCard from '@components/BodyCard.astro'
         <strong>Fan2dev</strong> es la opción perfecta para sus necesidades de desarrollo.
       </p>
     </div>
-    <UnderConstruction title="Home" />
+    <UnderConstruction title='Home' />
   </BodyCard>
 </Layout>
