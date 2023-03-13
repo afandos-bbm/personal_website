@@ -2,10 +2,10 @@
 import { Menu, Transition } from '@headlessui/react'
 import React from 'react'
 
-export default function Header({ children }) {
+export default function NavBar({ children }) {
   return (
     <header className='sticky flex flex-row items-center justify-between px-3 mx-5 transition-colors bg-gray-200 shadow-xl opacity-100 md:mx-20 dark:bg-gray-700 rounded-xl top-5 z-10'>
-      <div className='transition md:hover:scale-125 hover:scale-105'>
+      <div className='transition md:hover:scale-110 hover:scale-105'>
         <a href='/'>
           <img src='/my-favicon.svg' alt='logo' className='object-contain w-12 h-12' />
         </a>
@@ -35,8 +35,8 @@ export default function Header({ children }) {
                 leaveFrom='transform opacity-100 scale-100'
                 leaveTo='transform opacity-0 scale-95'
               >
-                <Menu.Items className='absolute right-0 z-10 p-2 text-gray-900 bg-gray-100 top-2 -mr-3 rounded-lg shadow-lg dark:bg-gray-700 '>
-                  <div className='gap-1 p-1 w-28 flex flex-col'>
+                <Menu.Items className='absolute right-0 z-10 p-5 text-gray-900 bg-gray-100 top-2 -mr-3 rounded-lg shadow-lg dark:bg-gray-700 '>
+                  <div className='gap-1 flex flex-col'>
                   {children}
                   </div>
                 </Menu.Items>

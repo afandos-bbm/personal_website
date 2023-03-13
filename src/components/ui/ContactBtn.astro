@@ -5,11 +5,11 @@ import '@flaticon/flaticon-uicons/css/solid/rounded.css'
 const { type } = Astro.props
 
 const bgColorMap = {
-  email: 'bg-[#787878]/30 hover:bg-[#787878]/80 dark:bg-[#787878]/30 dark:hover:bg-[#787878]/80',
-  telegram: 'bg-[#0088cc]/30 hover:bg-[#0088cc]/80 dark:bg-[#0088cc]/30 dark:hover:bg-[#0088cc]/80',
+  email: 'bg-transparent hover:bg-[#787878]/80 dark:bg-transparent dark:hover:bg-[#787878]/80',
+  telegram: 'bg-transparent hover:bg-[#0088cc]/80 dark:bg-transparent dark:hover:bg-[#0088cc]/80',
   linkedin:
-    'bg-[#0077b5]/30 hover:bg-[#0077b5]/80 dark:bg-[#0077b5]/30 dark:hover:bg-[#0077b5]/80 ',
-  discord: 'bg-[#5865f2]/30 hover:bg-[#5865f2]/80  dark:bg-[#5865f2]/30 dark:hover:bg-[#5865f2]/80'
+    'bg-transparent hover:bg-[#0077b5]/80 dark:bg-bg-transparent dark:hover:bg-[#0077b5]/80 ',
+  discord: 'bg-transparent hover:bg-[#5865f2]/80  dark:bg-transparent dark:hover:bg-[#5865f2]/80'
 }
 
 const iconMap = {
@@ -17,13 +17,6 @@ const iconMap = {
   telegram: 'fi fi-brands-telegram',
   linkedin: 'fi fi-brands-linkedin',
   discord: 'fi fi-brands-discord'
-}
-
-const textMap = {
-  email: 'Envíame un correo.',
-  telegram: 'Mándame un mensaje.',
-  linkedin: 'Conéctate conmigo.',
-  discord: 'Chatea conmigo.'
 }
 
 const onClickMap = {
@@ -35,7 +28,6 @@ const onClickMap = {
 
 const bgColor = bgColorMap[type]
 const icon = iconMap[type]
-const text = textMap[type]
 const onClick = onClickMap[type]
 ---
 
@@ -44,8 +36,5 @@ const onClick = onClickMap[type]
   class={`text-gray-900 ${bgColor} dark:text-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 justify-start`}
   onclick={onClick}
 >
-  <i class={`${icon} pr-7 text-4xl pt-1`}></i>
-  <p class='text-2xl'>
-    {text}
-  </p>
+  <i class={`${icon} text-4xl pt-1`}></i>
 </button>

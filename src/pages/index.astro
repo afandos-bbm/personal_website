@@ -1,51 +1,12 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import UnderConstruction from '@components/UnderConstruction.astro'
-import BodyCard from '@components/BodyCard.astro'
+import UnderConstruction from '@components/ui/UnderConstruction.astro'
+import BodyCard from '@components/ui/BodyCard.astro'
+import HeroSection from '@components/ui/HeroSection.astro'
 ---
 
 <Layout title=''>
-  <div class='mx-5 mt-10 flex gap-5 md:gap-10 items-center lg:mx-60 md:mx-24 sm:mx-10'>
-    <div class='flex rounded-full p-16 xl:p-28 bg-white items-center justify-center text-6xl'></div>
-    <div class='flex flex-col gap-1'>
-      <h1
-        class='xl:text-4xl text-2xl font-title sm:-mt-10 tracking-wider text-gray-800 uppercase dark:text-gray-200'
-      >
-        <div class='sm:hidden inline-flex'>Bienvenido a</div>
-        <br />
-        <span
-          class='h-20 pt-2 -ml-3 overflow-x-hidden animate-typeMini group-hover:animate-typeMini whitespace-nowrap will-change-transform sm:hidden inline-flex'
-        >
-          <span
-            class='xl:text-4xl text-2xl px-3 text-transparent bg-clip-text bg-gradient-to-tr font-title from-primary-600 to-secondary-basic'
-          >
-            fan2dev
-          </span> 👋
-        </span>
-        <span
-          class='box-border w-1 h-8 ml-2 -mb-2 dark:bg-white rounded bg-black md:h-12 animate-cursor will-change-opacity sm:hidden inline-block'
-        ></span>
-        <span
-          class='h-20 pt-2 overflow-x-hidden animate-type group-hover:animate-type whitespace-nowrap will-change-transform sm:inline-flex hidden'
-        >
-          Bienvenido a
-          <span
-            class='xl:text-4xl text-2xl px-3 text-transparent bg-clip-text bg-gradient-to-tr font-title from-primary-600 to-secondary-basic sm:inline-flex hidden'
-          >
-            fan2dev
-          </span> 👋
-        </span>
-        <span
-          class='box-border w-1 h-8 ml-2 -mb-2 dark:bg-white rounded bg-black md:h-12 animate-cursor will-change-opacity sm:inline-block hidden'
-        ></span>
-      </h1>
-      <h2
-        class='-mt-8 xl:text-2xl text-md font-bold text-gray-700 uppercase dark:text-gray-300 tracking-wider'
-      >
-        Desarrollador multiplataforma
-      </h2>
-    </div>
-  </div>
+  <HeroSection />
   <BodyCard primary>
     <div
       class='flex flex-col items-center justify-center py-5 space-y-4 text-justify text-gray-700 dark:text-gray-300'

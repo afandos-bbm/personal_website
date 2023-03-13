@@ -1,24 +1,51 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import BodyCard from '@components/BodyCard.astro'
-import Title from '@components/Title.astro'
-import ContactBtn from '@components/ContactBtn.astro'
+import BodyCard from '@components/ui/BodyCard.astro'
+import Title from '@components/ui/Title.astro'
+import ContactBtn from '@components/ui/ContactBtn.astro'
+import ContactForm from '@components/ContactForm.astro'
+
+import '@flaticon/flaticon-uicons/css/regular/all.css'
 ---
 
 <Layout title='Contacto'>
   <BodyCard>
     <Title type='contact' />
-    <div class='flex flex-col xl:flex-row items-center pb-5'>
-      <img
-        src='/icons/contact.svg'
-        alt='contact_image'
-        class='aspect-square w-[300px] lg:w-[500px]'
-      />
-      <div class='flex flex-col'>
-        <ContactBtn type='email' />
-        <ContactBtn type='telegram' />
-        <ContactBtn type='discord' />
-        <ContactBtn type='linkedin' />
+    <div class='flex flex-col xl:flex-row items-start pb-5 w-full justify-center pt-5 gap-5'>
+      <ContactForm />
+      <div class='flex flex-col mt-8 ml-2 xl:mt-0 xl:ml-0'>
+        <h2>
+          <div class='flex flex-col items-start justify-start w-full xl:w-96'>
+            <div>
+              <p class='text-lg leading-relaxed text-slate-500 dark:text-gray-200'>
+                Si tienes alguna pregunta, no dudes en contactarme a través de cualquiera de los
+                siguientes medios.
+              </p>
+              <div class='mt-5'>
+                <div class='flex items-center mt-2 space-x-2 text-gray-600'>
+                  <i class='fi fi-rr-marker dark:text-gray-200 text-gray-700 pt-1'></i><p
+                    class='dark:text-gray-200'
+                  >
+                    Valencia, España
+                  </p>
+                </div>
+              </div><div class='flex items-center mt-2 space-x-2 text-gray-600'>
+                <i class='fi fi-rr-envelope dark:text-gray-200 text-gray-700 pt-1'></i><a
+                  href='mailto:alejandrofan2@protonmail.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  class='dark:text-gray-200'
+                  >alejandrofan2@protonmail.com
+                </a>
+              </div>
+            </div>
+            <div class='flex flex-row pt-5'>
+              <ContactBtn type='telegram' />
+              <ContactBtn type='discord' />
+              <ContactBtn type='linkedin' />
+            </div>
+          </div>
+        </h2>
       </div>
     </div>
   </BodyCard>
