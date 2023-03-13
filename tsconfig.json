@@ -2,13 +2,20 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@components/*": ["src/components/*"],
-			"@layouts/*": ["src/layouts/*"],
-			"@services/*": ["src/services/*"]
+			"@components/*": [
+				"src/components/*"
+			],
+			"@layouts/*": [
+				"src/layouts/*"
+			],
+			"@services/*": [
+				"src/services/*"
+			]
 		},
 		"jsx": "react-jsx",
 		"jsxImportSource": "react",
 		"allowJs": false,
-		"esModuleInterop": true
+		"esModuleInterop": true,
+		"strictNullChecks": true
 	}
 }

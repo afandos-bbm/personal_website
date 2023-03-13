@@ -1,13 +1,40 @@
 ---
+import { getCollection } from 'astro:content'
+
 import Layout from '@layouts/Layout.astro'
-import UnderConstruction from '@components/ui/UnderConstruction.astro'
 import BodyCard from '@components/ui/BodyCard.astro'
 import Title from '@components/ui/Title.astro'
+import ProjectCard from '@components/ui/portfolio/ProjectCard.astro'
+
+const publishedProjectEntries = await getCollection('projects', ({ data }) => {
+  return data.publishDate < new Date()
+})
+publishedProjectEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+})
 ---
 
 <Layout title='Portafolio'>
   <BodyCard>
     <Title type='portfolio' />
-    <UnderConstruction title='Portafolio' />
+    <h2 class='text-2xl font-bold my-5 text-gray-700 dark:text-gray-200'>Proyectos</h2>
+    <div class='w-[85%] rounded-xl h-1 bg-gray-700 dark:bg-gray-200'></div>
+    <ul class='my-5 gap-5 w-[85%] flex flex-col'>
+      {
+        publishedProjectEntries.map((project, index) => (
+          <li>
+            <ProjectCard project={project} />
+          </li>
+        ))
+      }
+    </ul>
+    <!-- black line horizontal -->
+    <h2 class='text-2xl font-bold text-center my-5 text-gray-700 dark:text-gray-200'>Stacks</h2>
+    <div class='w-[85%] rounded-xl h-1 bg-gray-700 dark:bg-gray-200'></div>
+    <ul class='my-5 gap-5 w-[85%] flex flex-col'>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </BodyCard>
 </Layout>

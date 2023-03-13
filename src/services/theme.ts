@@ -12,4 +12,4 @@ if (theme === 'light') {
 } else {
   document.documentElement.classList.add('dark')
 }
-window.localStorage.setItem('theme', theme)
+window.localStorage.setItem('theme', theme || 'light')

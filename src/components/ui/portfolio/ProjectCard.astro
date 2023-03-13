@@ -1,0 +1,20 @@
+---
+import Button from '@components/ui/Button.astro'
+
+const { project } = Astro.props
+const { title, description, image, link } = project.data
+---
+
+<!-- creates a beautifully card for display my projects using tailwind -->
+<div class='flex'>
+  <img class='rounded-lg hidden xl:block' src={image.src} alt={image.alt} />
+  <div class='px-6 flex flex-col'>
+    <div class='font-bold text-xl mb-2 text-gray-700 dark:text-gray-200'>{title}</div>
+    <p class='text-base text-gray-700 dark:text-gray-200'>
+      {description}
+    </p>
+    <div class='py-4 mt-auto'>
+      <Button href={link}>Ver mas</Button>
+    </div>
+  </div>
+</div>
