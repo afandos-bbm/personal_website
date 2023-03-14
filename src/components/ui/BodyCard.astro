@@ -3,20 +3,20 @@ const { classNames, ...rest } = Astro.props
 ---
 
 <div {...rest} class:list={['w-full overflow-x-hidden', classNames]}>
-  <div class='mt-2 absolute lg:left-4 md:-left-24 sm:-left-[151px] -left-[171px]'>
+  <div class='mt-8 absolute lg:left-[99px] md:-left-[13px] sm:-left-[151px] -left-[89px]'>
     <img
       src='/logos/my-logo-left-cut.webp'
       alt='decoration-body-logo'
-      class='aspect-square w-full h-full'
+      class='aspect-auto w-full h-full'
     />
   </div>
   <div
-    class='absolute lg:right-4 bottom-0 md:-right-24 sm:-right-[151px] -right-[171px] hidden md:block z-10'
+    class='absolute lg:right-[101px] bottom-8 md:-right-[11px] sm:-right-[151px] -right-[87px] md:block z-10'
   >
     <img
       src='/logos/my-logo-right-cut.webp'
       alt='decoration-body-logo'
-      class='aspect-square w-full h-full'
+      class='aspect-auto w-full h-full'
     />
   </div>
   <section
