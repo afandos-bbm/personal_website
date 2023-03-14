@@ -1,14 +1,19 @@
 ---
+import '@flaticon/flaticon-uicons/css/brands/all.css'
+
 import { getCollection } from 'astro:content'
 
 import Layout from '@layouts/Layout.astro'
 import BodyCard from '@components/ui/BodyCard.astro'
 import Title from '@components/ui/Title.astro'
 import ProjectCard from '@components/ui/portfolio/ProjectCard.astro'
+import StackCard from '@components/ui/portfolio/StackCard.astro'
+import SkillCard from '@components/ui/portfolio/SkillCard.astro'
 
 const publishedProjectEntries = await getCollection('projects', ({ data }) => {
   return data.publishDate < new Date()
 })
+
 publishedProjectEntries.sort(function (a, b) {
   return b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 })
@@ -17,7 +22,11 @@ publishedProjectEntries.sort(function (a, b) {
 <Layout title='Portafolio'>
   <BodyCard>
     <Title type='portfolio' />
-    <h2 class='text-2xl font-bold my-5 text-gray-700 dark:text-gray-200'>Proyectos</h2>
+    <h2
+      class='flex text-2xl font-bold my-5 text-gray-700 dark:text-gray-200 self-start lg:ml-28 ml-10'
+    >
+      <i class='fi fi-rr-folder mt-1 mr-2'></i>Proyectos
+    </h2>
     <div class='w-[85%] rounded-xl h-1 bg-gray-700 dark:bg-gray-200'></div>
     <ul class='my-5 gap-5 w-[85%] flex flex-col'>
       {
@@ -29,12 +38,100 @@ publishedProjectEntries.sort(function (a, b) {
       }
     </ul>
     <!-- black line horizontal -->
-    <h2 class='text-2xl font-bold text-center my-5 text-gray-700 dark:text-gray-200'>Stacks</h2>
+    <h2
+      class='flex text-2xl font-bold text-center my-5 text-gray-700 dark:text-gray-200 self-start lg:ml-28 ml-10'
+    >
+      <i class='fi fi-rr-badge-check mt-1 mr-2'></i> Skill Stacks
+    </h2>
     <div class='w-[85%] rounded-xl h-1 bg-gray-700 dark:bg-gray-200'></div>
     <ul class='my-5 gap-5 w-[85%] flex flex-col'>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>
+        <StackCard
+          title='Landings'
+          description='Utilizo las siguientes tecnologías para crear proyectos web. Parra sitios estáticos lo mas importante es la velocidad de carga,por eso utilizo Astro para crear sitios web estáticos que cargan muy rápido. Ademas si lo necesito puedo utilizar otras tecnologías junto a Astro. También utilizo Tailwind para estilizar mis proyectos web de una manera rápida, sencilla y eficiente. Por último, utilizo Typescript para tipar mis proyectos y tener un mejor control de los mismos.'
+        >
+          <SkillCard
+            title='astro'
+            icon='astro'
+            description='Utilizo Astro para crear proyectos web estáticos que cargan muy rápido.'
+            url='https://astro.build/'
+          />
+          <SkillCard
+            title='tailwind'
+            icon='tailwind'
+            description='Utilizo Tailwind para estilizar mis proyectos web forma rápida, sencilla y eficiente.'
+            url='https://tailwindcss.com/'
+          />
+          <SkillCard
+            title='typescript'
+            icon='typescript'
+            description='Utilizo Typescript para tipar mis proyectos y tener un mejor control de los mismos.'
+            url='https://www.typescriptlang.org/'
+          />
+          <SkillCard
+            title='Cloudflare'
+            icon='cloudflare'
+            description='Cloudflare es una de las mejores formas de desplegar proyectos web estáticos con gran seguridad y velocidad.'
+            url='https://www.cloudflare.com'
+          />
+        </StackCard>
+      </li>
+      <li>
+        <StackCard
+          title='Aplicaciones multiplataforma'
+          description='Utilizo las siguientes tecnologías para crear aplicaciones multiplataforma. Para aplicaciones multiplataforma hoy en dia una de las mejores formas de ahorrar costes es usar un mismo desarrollo para todas las plataformas. Para ello confío en Flutter, que es una tecnología que me permite crear aplicaciones móviles con un solo código para android e IOS. Pero no solo eso, también me permite crear aplicaciones web, Windows, Linux, y MacOS.'
+        >
+          <SkillCard
+            title='flutter'
+            icon='flutter'
+            description='Creación de aplicaciones multiplataforma con un solo código para todas las plataformas.'
+            url='https://flutter.dev/'
+          />
+          <SkillCard
+            title='dart'
+            icon='dart'
+            description='Utilizo Dart como lenguaje base para usar el Framework de Flutter.'
+            url='https://dart.dev/'
+          />
+          <SkillCard
+            title='Cloudflare'
+            icon='cloudflare'
+            description='Cloudflare es una de las mejores formas de desplegar proyectos web estáticos con gran seguridad y velocidad.'
+            url='https://www.cloudflare.com'
+          />
+        </StackCard>
+      </li>
+      <li>
+        <StackCard
+          title='Backend'
+          description='El backend nos permite darle vida a nuestro proyecto en caso de que lo necesitemos. Para ello utilizo NodeJS, que es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome. Sobre el utilizo Express, que es un framework de NodeJS que nos permite crear APIs REST de una forma rápida y sencilla.'
+        >
+          <SkillCard
+            title='nodeJS'
+            icon='nodejs'
+            description='NodeJS es un entorno de ejecución para JavaScript para crear aplicaciones de backend.'
+            url='https://nodejs.org/es/'
+          />
+          <SkillCard
+            title='expressJS'
+            icon='express'
+            description='Express es un framework de NodeJS que nos permite crear APIs.'
+            url='https://tailwindcss.com/'
+          />
+          <SkillCard
+            title='typescript'
+            icon='typescript'
+            description='Utilizo Typescript para tipar mis proyectos y tener un mejor control de los mismos.'
+            url='https://www.typescriptlang.org/'
+          />
+          <SkillCard
+            title='mariaDB'
+            icon='mariadb'
+            description='Utilizo MariaDB como base de datos relacional para mis proyectos.'
+            url='https://mariadb.org/'
+          />
+        </StackCard>
+      </li>
     </ul>
   </BodyCard>
 </Layout>

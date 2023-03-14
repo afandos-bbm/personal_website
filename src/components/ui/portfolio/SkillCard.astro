@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string
+  icon: string
+  description: string
+  url: string
+}
+
+const { title, icon, description, url } = Astro.props
+---
+
+<a href={url} target='_blank'>
+  <div
+    class='flex flex-col bg-gray-300 dark:bg-gray-600 h-44 w-44 rounded-xl p-3 shadow dark:text-gray-200'
+  >
+    <div class='flex items-center'>
+      <img src={`icons/programming/${icon}.svg`} alt={icon} class='h-8 w-8' />
+
+      <h4 class='ml-3 font-bold uppercase'>{title}</h4>
+    </div>
+    <div class='text-sm my-3'>
+      <p>{description}</p>
+    </div>
+  </div>
+</a>

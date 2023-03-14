@@ -6,7 +6,7 @@ const { title, description, image, link } = project.data
 ---
 
 <!-- creates a beautifully card for display my projects using tailwind -->
-<div class='flex'>
+<section class='flex'>
   <img class='rounded-lg hidden xl:block' src={image.src} alt={image.alt} />
   <div class='px-6 flex flex-col'>
     <div class='font-bold text-xl mb-2 text-gray-700 dark:text-gray-200'>{title}</div>
@@ -17,4 +17,4 @@ const { title, description, image, link } = project.data
       <Button href={link}>Ver mas</Button>
     </div>
   </div>
-</div>
+</section>
